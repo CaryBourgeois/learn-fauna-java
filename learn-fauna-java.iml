@@ -14,15 +14,15 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.5" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java:2.1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-common:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.5" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java:2.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-common:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.ning:async-http-client:1.9.39" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty:3.10.5.Final" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java-dsl:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java-dsl:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-guava:2.8.8" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.4" level="project" />
     <orderEntry type="library" name="Maven: org.joda:joda-convert:1.8.1" level="project" />

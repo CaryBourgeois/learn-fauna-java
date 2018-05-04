@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fauna;
+package com.fauna.learnfauna;
 
 /*
  * These imports are for basic functionality around logging and JSON handling and Futures.
@@ -24,6 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 /*
@@ -41,7 +42,14 @@ import static com.faunadb.client.query.Language.*;
 public class Lesson1 {
     private static final Logger logger = LoggerFactory.getLogger(Lesson1.class);
 
-    private static ObjectMapper mapper = new ObjectMapper();
+    private static ObjectMapper mapper = getMapper();
+
+    private static ObjectMapper getMapper() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        return mapper;
+    }
 
     private static String toPrettyJson(Value value) throws JsonProcessingException {
         return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(value);
