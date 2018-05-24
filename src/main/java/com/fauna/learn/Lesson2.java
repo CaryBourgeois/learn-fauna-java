@@ -58,9 +58,7 @@ public class Lesson2 {
 
     private static String createDatabase(String sURL, String secret , String dbName) throws Exception {
         /*
-         * Create an admin connection to FaunaDB.
-         *
-         * This is only used if you are using your own Developers or Enterprise edition of FaunaDB
+         * Create an admin client. This is the client we will use to create the database.
          */
         FaunaClient adminClient = FaunaClient.builder()
                 .withEndpoint(sURL)
@@ -69,7 +67,9 @@ public class Lesson2 {
         logger.info("Connected to FaunaDB as Admin!");
 
         /*
-         * Create a database
+         * The code below creates the Database that will be used for this example. Please note that
+         * the existence of the database is evaluated, deleted if it exists and recreated with a single
+         * call to the Fauna DB.
          */
         Value result = adminClient.query(
                 Arr(

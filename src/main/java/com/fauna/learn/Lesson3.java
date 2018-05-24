@@ -65,8 +65,6 @@ public class Lesson3 {
     private static String createDatabase(String sURL, String secret , String dbName) throws Exception {
         /*
          * Create an admin connection to FaunaDB.
-         *
-         * This is only used if you are using your own Developers or Enterprise edition of FaunaDB
          */
         FaunaClient adminClient = FaunaClient.builder()
                 .withEndpoint(sURL)

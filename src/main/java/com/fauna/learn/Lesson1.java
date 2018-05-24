@@ -59,7 +59,9 @@ public class Lesson1 {
         /*
          * Create an admin connection to FaunaDB.
          *
-         * This is only used if you are using your own Developers or Enterprise edition of FaunaDB
+         * If you are using the FaunaDB-Cloud version:
+         *  - remove the 'withEndpoint line below
+         *  - substitute your secret for "secret" below
          */
         FaunaClient adminClient = FaunaClient.builder()
                 .withEndpoint("http://127.0.0.1:8443")
@@ -89,13 +91,13 @@ public class Lesson1 {
                         Value(true)
                 )
         ).get();
-        logger.info("Successfully deleted database: {} :: \n{}", dbName, toPrettyJson(result));
+        logger.info("Deleted database: {} :: \n{}", dbName, toPrettyJson(result));
 
         /*
          * Just to keep things neat and tidy, close the client connection
          */
         adminClient.close();
-        logger.info("Succesfully disconnected from FaunaDB as Admin!");
+        logger.info("Disconnected from FaunaDB as Admin!");
 
         // add this at the end of execution to make things shut down nicely
         System.exit(0);
