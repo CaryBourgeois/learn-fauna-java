@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fauna.learnfauna;
+package com.fauna.learn;
 
 /*
  * These imports are for basic functionality around logging and JSON handling and Futures.
