@@ -20,7 +20,6 @@ package com.fauna.learn;
  * These imports are for basic functionality around logging and JSON handling and Futures.
  * They should best be thought of as a convenience items for our demo apps.
  */
-import com.faunadb.client.query.Expr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +44,6 @@ import java.util.Random;
  */
 import com.faunadb.client.*;
 import com.faunadb.client.types.*;
-import com.faunadb.client.types.Value.*;
 import static com.faunadb.client.query.Language.*;
 
 
@@ -166,7 +164,7 @@ public class Lesson4 {
 
     private static List<Value> createCustomers(FaunaClient client, int numCustomers, int initBalance) throws Exception {
         /*
-         * Create 20 customer records with ids from 1 to 20
+         * Create 'numCustomers' customer records with ids from 1 to 'numCustomers'
          */
         List<Integer> range = IntStream
                 .rangeClosed(1, numCustomers)
@@ -195,7 +193,7 @@ public class Lesson4 {
     private static int sumCustBalances(FaunaClient client, List<Value> custRefs) throws Exception {
         /*
          * This is going to take the customer references that were created during the
-         * createCustomers routine and aggreagate all the balances for them. We could so this,
+         * createCustomers routine and aggregate all the balances for them. We could so this,
          * and probably would, with class index. In this case we want to take this approach to show
          * how to use references.
          */
@@ -219,6 +217,12 @@ public class Lesson4 {
     }
 
     public static void createTransaction(FaunaClient client, int numCustomers, int maxTxnAmount) throws Exception {
+        /*
+         * This method is going to create a random transaction that moves a random amount
+         * from a source customer to a destination customer. Prior to committing the transaction
+         * a check will be performed to insure that the source customer has a sufficient balance
+         * to cover the amount and not go into an overdrawn state.
+         */
         Random random = new Random();
 
         String uuid = UUID.randomUUID().toString();
@@ -247,7 +251,7 @@ public class Lesson4 {
                                                                 Class(Value("transactions")), Obj("data",
                                                                         Obj("uuid", Value(uuid),
                                                                                 "sourceCust", Select(Arr(Value("data"), Value("id")), Var("sourceCust")),
-                                                                                "destCust", Select(Arr(Value("data"), Value("balance")), Var("destCust")),
+                                                                                "destCust", Select(Arr(Value("data"), Value("id")), Var("destCust")),
                                                                                 "amount", Value(amount)
                                                                         )
                                                                 )),
