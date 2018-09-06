@@ -13,18 +13,31 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.25" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.5" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.5" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-common:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.ning:async-http-client:1.9.39" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty:3.10.5.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java:2.5.4" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-common:2.5.4" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.8.8" level="project" />
+    <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client:2.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client-netty-utils:2.5.2" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-http:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-socks:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler-proxy:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver-dns:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec-dns:4.1.27.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.netty:netty-reactive-streams:2.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.activation:javax.activation:1.2.0" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.0" level="project" />
-    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java-dsl:2.2.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-guava:2.8.8" level="project" />
-    <orderEntry type="library" name="Maven: joda-time:joda-time:2.9.4" level="project" />
-    <orderEntry type="library" name="Maven: org.joda:joda-convert:1.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.faunadb:faunadb-java-dsl:2.5.4" level="project" />
   </component>
 </module>

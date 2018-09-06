@@ -27,13 +27,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import com.google.common.base.Optional;
+import java.util.*;
 
-import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Collectors;
-import java.util.UUID;
-import java.util.Random;
 
 /*
  * These are the required imports for Fauna.
@@ -183,7 +180,7 @@ public class Lesson4 {
                 )
         ).get();
 
-        List<Value> custRefs = result.collect(Field.at("ref")).asList();
+        List<Value> custRefs = result.collect(Field.at("ref")); //.asList();
 
         logger.info("Created {} new customers with balance: {}", numCustomers, initBalance);
 
@@ -204,11 +201,9 @@ public class Lesson4 {
 
         int balance = 0;
 
-        List<Integer> data = result.collect(Field.at("balance").to(Codec.INTEGER)).asList();
-        if (!data.isEmpty()) {
-            for (Integer d : data) {
-                balance += d;
-            }
+        Iterator<Integer> data = result.collect(Field.at("balance").to(Codec.INTEGER)).iterator(); //.asList();
+        while (data.hasNext()) {
+            balance += data.next();
         }
 
         logger.info("Customer Balance Sum: {}", balance);

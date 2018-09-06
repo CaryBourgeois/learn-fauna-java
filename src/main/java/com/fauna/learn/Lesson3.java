@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import com.google.common.base.Optional;
+import java.util.Optional;
 
 import java.util.List;
 import java.util.Arrays;
@@ -282,8 +282,8 @@ public class Lesson3 {
          *
          * NOTE: after is inclusive of the value.
          */
-        Optional<Value> dataPage = Optional.absent();
-        Optional<Value> cursorPos = Optional.absent();
+        Optional<Value> dataPage = Optional.empty();
+        Optional<Value> cursorPos = Optional.empty();
         Expr paginationExpr;
 
         int pageSize = 8;
@@ -304,6 +304,7 @@ public class Lesson3 {
 
             dataPage = result.getOptional(Field.at("data"));
             if (dataPage.isPresent()) {
+
                 logger.info("Page Results: {}", toPrettyJson(dataPage.get()));
             }
 
